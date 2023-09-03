@@ -1889,12 +1889,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": 0.7.4
+  checksum: bb7ec6d48c572c540e24e47cc94fc2f8dec2d6a342ae97bc9c8b6388d9b8d283862672172a1bb62d335c02662afe6291e10c71e9b8642664a8b43416cdceffac
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^1.2.1":
   version: 1.2.1
   resolution: "@emotion/is-prop-valid@npm:1.2.1"
   dependencies:
     "@emotion/memoize": ^0.8.1
   checksum: 8f42dc573a3fad79b021479becb639b8fe3b60bdd1081a775d32388bca418ee53074c7602a4c845c5f75fa6831eb1cbdc4d208cc0299f57014ed3a02abcad16a
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@emotion/memoize@npm:0.7.4"
+  checksum: 4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
   languageName: node
   linkType: hard
 
@@ -7558,6 +7574,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^10.16.2":
+  version: 10.16.2
+  resolution: "framer-motion@npm:10.16.2"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    tslib: ^2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 341de9ed9ad26e67306d6467a17f5260ce0e8a034f936f2af22f03a7fe4087de487a8aebcbc396ab591de7fe181926d0cd6a79ec1dca6172e85f7fdf5103484f
+  languageName: node
+  linkType: hard
+
 "fresh@npm:0.5.2":
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
@@ -10838,6 +10875,7 @@ __metadata:
     eslint-plugin-prettier: ^5.0.0
     eslint-plugin-react: ^7.33.2
     firebase: ^10.3.0
+    framer-motion: ^10.16.2
     lodash: ^4.17.21
     prettier: ^3.0.2
     react: ^18.2.0
@@ -13905,7 +13943,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.5.0, tslib@npm:^2.6.0":
+"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.6.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
