@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { RecoilRoot } from 'recoil'
 
 import './index.css'
 import App from './App'
@@ -8,6 +9,7 @@ import reportWebVitals from './reportWebVitals'
 import { Global } from '@emotion/react'
 import globalStyles from './styles/globalStyles'
 
+import AuthGuard from '@components/auth/AuthGuard'
 import { AlertContextProvider } from '@contexts/AlertContext'
 
 const client = new QueryClient({
@@ -18,11 +20,15 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <Global styles={globalStyles} />
-    <QueryClientProvider client={client}>
-      <AlertContextProvider>
-        <App />
-      </AlertContextProvider>
-    </QueryClientProvider>
+    <RecoilRoot>
+      <QueryClientProvider client={client}>
+        <AlertContextProvider>
+          <AuthGuard>
+            <App />
+          </AuthGuard>
+        </AlertContextProvider>
+      </QueryClientProvider>
+    </RecoilRoot>
   </React.StrictMode>,
 )
 
