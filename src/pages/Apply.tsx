@@ -1,31 +1,15 @@
 import { useState } from 'react'
 
-import Terms from '@components/apply/Terms'
-import BasicInfo from '@components/apply/BasicInfo'
-import CardInfo from '@components/apply/CardInfo'
-
-import { ApplyValues } from '@models/apply'
+import Apply from '@components/apply'
 
 function ApplyPage() {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(2)
 
-  const handleTermsChange = (terms: ApplyValues['terms']) => {
-    console.log('terms', terms)
+  const handleSubmit = () => {
+    // TODO: 카드신청
   }
 
-  const handleBasicInfoChange = (
-    infoValues: Pick<ApplyValues, 'salary' | 'payDate' | 'creditScore'>,
-  ) => {
-    console.log('infoValues', infoValues)
-  }
-
-  return (
-    <div>
-      {step === 0 ? <Terms onNext={handleTermsChange} /> : null}
-      {step === 1 ? <BasicInfo onNext={handleBasicInfoChange} /> : null}
-      {step === 2 ? <CardInfo /> : null}
-    </div>
-  )
+  return <Apply step={step} onSubmit={handleSubmit} />
 }
 
 export default ApplyPage
